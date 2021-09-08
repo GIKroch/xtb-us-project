@@ -159,7 +159,8 @@ def upload_dropbox():
     dropbox_path = '/xtb-day-trading/stocks.xlsx'
 
     # Computer path to be adjusted
-    computer_path = r'C:\Users\grzeg\OneDrive\Pulpit\Projekty\USA XTB - Day Trading\stocks_formatted_2.xlsx'
+    curr_dir = os.getcwd()
+    computer_path = curr_dir + "\\stocks_formatted.xlsx"
 
     client = dropbox.Dropbox(dropbox_access_token)
     print("[SUCCESS] dropbox account linked")
@@ -199,3 +200,4 @@ def run():
     upload_dropbox()
 
 run()
+
